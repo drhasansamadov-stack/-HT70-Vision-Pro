@@ -24,11 +24,11 @@ jobs:
           gradle-version: '8.9'
       - name: Extract and build
         run: |
-          unzip -q HT70_Vision_Pro_v0.5_Source.zip
-          cd HT70_Vision_Pro_v0.5_Source
+          unzip -q HT70_Vision_Pro_v0.6_Source.zip
+          cd HT70_Vision_Pro_v0.6_Source
           gradle --no-daemon assembleDebug
       - uses: actions/upload-artifact@v4
         with:
           name: HT70-Vision-Pro-debug-APK
-          path: HT70_Vision_Pro_v0.5_Source/app/build/outputs/apk/debug/*.apk
+          path: HT70_Vision_Pro_v0.6_Source/app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
