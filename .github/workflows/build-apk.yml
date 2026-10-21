@@ -27,7 +27,7 @@ jobs:
           unzip -q HT70_Vision_Pro_v0.6_Source.zip
           
           cd HT70_Vision_Pro_v0.6_Source
-          gradle --no-daemon 
+          gradle --no-daemon \
           -Pandroid.useAndroidX=true assembleDebug
       - uses: actions/upload-artifact@v4
         with:
